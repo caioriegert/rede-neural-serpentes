@@ -1,4 +1,4 @@
-# SnakeID — Identificação de Cobras e Primeiros Socorros
+# SnakeID — Identificação de Serpentes e Primeiros Socorros
 
 Trabalho da disciplina de Inteligência Artificial. A aplicação recebe uma foto
 de uma cobra, identifica a espécie usando uma rede neural treinada no Google
