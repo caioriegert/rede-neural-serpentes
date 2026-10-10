@@ -1,0 +1,42 @@
+.site-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header .logo-img {
+  height: 48px;
+  margin-bottom: 1rem;
+}
+
+.site-header h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  color: var(--text);
+}
+
+.site-header .subtitle {
+  color: var(--text-muted);
+  font-size: 14px;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.disclaimer {
+  background: var(--warning-soft);
+  border: 1px solid var(--warning);
+  border-left-width: 4px;
+  padding: 12px 14px;
+  font-size: 13px;
+  color: #5a4012;
+  margin-bottom: 1.5rem;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.disclaimer strong {
+  color: #4a3410;
+}

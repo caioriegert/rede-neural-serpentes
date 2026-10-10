@@ -1,0 +1,130 @@
+.results {
+  display: none;
+  padding: 1.25rem;
+}
+
+.results.visible {
+  display: block;
+}
+
+.species-card {
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--border-strong);
+  padding: 1.1rem 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.species-card.danger {
+  background: var(--danger-soft);
+  border-color: var(--danger);
+  border-left-color: var(--danger);
+}
+
+.species-card.safe {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  border-left-color: var(--accent);
+}
+
+.species-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.species-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.species-confidence {
+  font-size: 12px;
+  color: var(--text-muted);
+  white-space: nowrap;
+  padding-top: 4px;
+}
+
+.species-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid transparent;
+  margin-top: 4px;
+}
+
+.species-badge.danger {
+  background: var(--danger);
+  color: #fff;
+}
+
+.species-badge.safe {
+  background: var(--accent);
+  color: #fff;
+}
+
+.species-badge.neutral {
+  background: var(--surface);
+  color: var(--text-muted);
+  border-color: var(--border-strong);
+}
+
+.other-probs {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.other-probs-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.bar-row {
+  margin-bottom: 8px;
+}
+
+.bar-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.bar-meta .name {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.bar-meta .pct {
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.bar-track {
+  height: 6px;
+  background: #e8e8e2;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background: var(--border-strong);
+  transition: width 0.4s ease;
+}
+
+.bar-fill.top {
+  background: var(--accent);
+}

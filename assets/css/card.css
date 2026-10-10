@@ -1,0 +1,124 @@
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.drop-zone {
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface-alt);
+}
+
+.drop-zone:hover,
+.drop-zone.drag-over {
+  background: #f0f0ec;
+  border-color: var(--border-strong);
+}
+
+.drop-zone h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+.drop-zone p {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.drop-zone .separator {
+  margin: 16px 0;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.btn-upload {
+  display: inline-block;
+  padding: 8px 18px;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.btn-upload:hover {
+  background: var(--surface-alt);
+  border-color: var(--accent);
+}
+
+.preview-area {
+  display: none;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  align-items: center;
+  gap: 14px;
+}
+
+.preview-area.visible {
+  display: flex;
+}
+
+.preview-area img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.preview-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.preview-info .filename {
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--text);
+}
+
+.preview-info .change-btn {
+  font-size: 12px;
+  color: var(--accent);
+  cursor: pointer;
+  margin-top: 4px;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  text-decoration: underline;
+}
+
+.btn-classify {
+  display: none;
+  width: calc(100% - 2.5rem);
+  margin: 1rem 1.25rem;
+  padding: 11px;
+  background: var(--accent);
+  color: #fff;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.btn-classify:hover {
+  background: #245c43;
+}
+
+.btn-classify:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

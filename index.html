@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SnakeID — Identificação de Cobras e Primeiros Socorros</title>
+
+  <link rel="stylesheet" href="assets/css/main.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.21.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8.5/dist/teachablemachine-image.min.js"></script>
+</head>
+<body>
+
+  <div class="container">
+
+    <header class="site-header">
+      <img
+        src="assets/img/logo-unifebe-horizontal-slogan-cor-1.png"
+        alt="UNIFEBE"
+        class="logo-img"
+      />
+      <h1>Identificação de cobras e primeiros socorros</h1>
+      <p class="subtitle">
+        Em caso de picada, fotografe a cobra para descobrir rapidamente a
+        espécie e como agir.
+      </p>
+    </header>
+
+    <div class="disclaimer">
+      <div>
+        <strong>Aviso médico:</strong>
+        em qualquer caso de picada de cobra, ligue imediatamente para o SAMU
+        (192) ou vá ao hospital mais próximo. Esta ferramenta é apenas um
+        auxílio e não substitui atendimento médico.
+      </div>
+    </div>
+
+    <div class="card">
+
+      <div class="drop-zone" id="dropZone">
+        <h3>Envie uma foto da cobra</h3>
+        <p>Arraste a imagem para esta área ou clique para selecionar.</p>
+        <div class="separator">— ou —</div>
+        <span class="btn-upload">Tirar foto / Escolher arquivo</span>
+      </div>
+
+      <input
+        type="file"
+        id="fileInput"
+        accept="image/*"
+        capture="environment"
+        style="display:none"
+      />
+
+      <div class="preview-area" id="previewArea">
+        <img id="previewImg" src="" alt="Pré-visualização" />
+        <div class="preview-info">
+          <div class="filename" id="fileName">—</div>
+          <button class="change-btn" id="changeImageBtn" type="button">
+            Trocar imagem
+          </button>
+        </div>
+      </div>
+
+      <div class="error-bar" id="errorBar"></div>
+
+      <button class="btn-classify" id="classifyBtn" type="button">
+        Identificar cobra
+      </button>
+
+      <div class="loading-card" id="loadingCard">
+        <div class="loading-spinner"></div>
+        <div class="loading-text" id="loadingText">Analisando imagem...</div>
+      </div>
+
+      <div class="results" id="resultsBox">
+        <div class="species-card" id="speciesCard">
+          <div class="species-header">
+            <div>
+              <div class="species-name" id="speciesName">—</div>
+              <span class="species-badge neutral" id="speciesBadge">—</span>
+            </div>
+            <div class="species-confidence" id="speciesConf">—</div>
+          </div>
+
+          <div class="other-probs">
+            <div class="other-probs-title">Distribuição de probabilidades</div>
+            <div id="allBars"></div>
+          </div>
+        </div>
+
+        <div id="aiInfoContainer"></div>
+      </div>
+
+    </div>
+
+    <footer class="site-footer">
+      Modelo treinado com Google Teachable Machine ·
+      Informações geradas com auxílio de IA (Claude)
+    </footer>
+
+  </div>
+
+  <div class="status-pill" id="statusPill">
+    <div class="spinner-mini"></div>
+    <span id="statusText">Carregando modelo...</span>
+  </div>
+
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

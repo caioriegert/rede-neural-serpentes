@@ -1,0 +1,56 @@
+.info-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  margin-top: 1rem;
+  padding: 1.1rem 1.25rem;
+}
+
+.info-section.urgent {
+  background: var(--danger-soft);
+  border-color: var(--danger);
+  border-left: 4px solid var(--danger);
+}
+
+.info-title {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+  color: var(--text-muted);
+}
+
+.info-title.urgent {
+  color: var(--danger);
+}
+
+.info-content {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.info-content p {
+  margin-bottom: 8px;
+}
+
+.info-content p:last-child {
+  margin-bottom: 0;
+}
+
+.info-content ul,
+.info-content ol {
+  padding-left: 1.25rem;
+  margin-bottom: 8px;
+}
+
+.info-content li {
+  margin-bottom: 4px;
+}
+
+.info-content .note {
+  color: var(--text-muted);
+  font-size: 12px;
+  margin-top: 8px;
+  font-style: italic;
+}
